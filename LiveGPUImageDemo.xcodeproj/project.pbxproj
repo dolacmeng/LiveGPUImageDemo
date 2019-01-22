@@ -12,9 +12,12 @@
 		5DC7E8AF21F5A723003D211E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7E8AD21F5A723003D211E /* Main.storyboard */; };
 		5DC7E8B121F5A724003D211E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7E8B021F5A724003D211E /* Assets.xcassets */; };
 		5DC7E8B421F5A724003D211E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC7E8B221F5A724003D211E /* LaunchScreen.storyboard */; };
+		A2FC75201507E02F718D0AFE /* Pods_LiveGPUImageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C00F9E75D15D7E21F13294F /* Pods_LiveGPUImageDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C00F9E75D15D7E21F13294F /* Pods_LiveGPUImageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveGPUImageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F3F2418FB460989891CDFD /* Pods-LiveGPUImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveGPUImageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveGPUImageDemo/Pods-LiveGPUImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5DC7E8A621F5A723003D211E /* LiveGPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveGPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC7E8A921F5A723003D211E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC7E8AB21F5A723003D211E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		5DC7E8B021F5A724003D211E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DC7E8B321F5A724003D211E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DC7E8B521F5A724003D211E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC4A2491A965AA2F2CB07A5 /* Pods-LiveGPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveGPUImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveGPUImageDemo/Pods-LiveGPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FC75201507E02F718D0AFE /* Pods_LiveGPUImageDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082FCF98DD51D8590B280520 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50F3F2418FB460989891CDFD /* Pods-LiveGPUImageDemo.debug.xcconfig */,
+				8EC4A2491A965AA2F2CB07A5 /* Pods-LiveGPUImageDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3FF3F880A11F4D48EAE5CA6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C00F9E75D15D7E21F13294F /* Pods_LiveGPUImageDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DC7E89D21F5A722003D211E = {
 			isa = PBXGroup;
 			children = (
 				5DC7E8A821F5A723003D211E /* LiveGPUImageDemo */,
 				5DC7E8A721F5A723003D211E /* Products */,
+				082FCF98DD51D8590B280520 /* Pods */,
+				3FF3F880A11F4D48EAE5CA6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DC7E8B821F5A724003D211E /* Build configuration list for PBXNativeTarget "LiveGPUImageDemo" */;
 			buildPhases = (
+				982885D87DD6F964BEAECA29 /* [CP] Check Pods Manifest.lock */,
 				5DC7E8A221F5A723003D211E /* Sources */,
 				5DC7E8A321F5A723003D211E /* Frameworks */,
 				5DC7E8A421F5A723003D211E /* Resources */,
+				EF9C0D3EE9547FD4B8D6ACC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		982885D87DD6F964BEAECA29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveGPUImageDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF9C0D3EE9547FD4B8D6ACC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiveGPUImageDemo/Pods-LiveGPUImageDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveGPUImageDemo/Pods-LiveGPUImageDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DC7E8A221F5A723003D211E /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		5DC7E8B921F5A724003D211E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F3F2418FB460989891CDFD /* Pods-LiveGPUImageDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +372,7 @@
 		};
 		5DC7E8BA21F5A724003D211E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EC4A2491A965AA2F2CB07A5 /* Pods-LiveGPUImageDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
