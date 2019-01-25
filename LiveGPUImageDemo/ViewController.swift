@@ -12,24 +12,25 @@ import AVKit
 
 class ViewController: UIViewController {
 
-    fileprivate lazy var camera : GPUImageStillCamera = GPUImageStillCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: .back)
-    fileprivate lazy var filter = GPUImageBrightnessFilter()
+    fileprivate lazy var camera : GPUImageVideoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSession.Preset.high.rawValue, cameraPosition: .back)
     
     //实时显示画面的预览图层
     fileprivate lazy var showView = GPUImageView(frame: view.bounds)
-
     
+    //滤镜
     let bilateralFilter = GPUImageBilateralFilter()//磨皮
     let exposureFilter = GPUImageExposureFilter() //曝光
     let brightnessFilter = GPUImageBrightnessFilter()//美白
     let satureationFilter = GPUImageSaturationFilter()//饱和
     
+    //视频写入类
     fileprivate lazy var movieWriter : GPUImageMovieWriter = {
         [unowned self] in
         let writer = GPUImageMovieWriter(movieURL: self.fileURL, size: self.view.bounds.size)
         return writer!
     }()
     
+    //视频沙盒地址
     fileprivate lazy var fileURL : URL = {
         [unowned self] in
         return URL(fileURLWithPath: "\(NSTemporaryDirectory())movie\(arc4random()).mp4")
